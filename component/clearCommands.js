@@ -14,7 +14,7 @@ const rest = new REST({ version: "10" }).setToken(
         process.env.DISCORD_CLIENT_ID,
         process.env.DISCORD_GUILD_ID
       ),
-      { body: [] } // 👈 ส่ง body ว่าง = ลบทั้งหมด
+      { body: [] } //  ส่ง body ว่าง = ลบทั้งหมด
     );
     console.log("ลบ Slash Commands ทั้งหมดเรียบร้อย!");
   } catch (err) {

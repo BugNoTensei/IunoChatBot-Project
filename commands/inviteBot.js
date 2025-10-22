@@ -15,7 +15,7 @@ module.exports = {
         });
       }
 
-      // ✅ URL สำหรับเชิญบอท (พร้อม permission)
+      //  URL สำหรับเชิญบอท 
       const inviteUrl = `https://discord.com/oauth2/authorize?client_id=${clientId}&permissions=8&scope=bot%20applications.commands`;
 
       const embed = new EmbedBuilder()

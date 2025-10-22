@@ -62,7 +62,6 @@ Iuno:
 
     console.log(`🎭 อารมณ์ที่ AI ให้มา: ${emotion}`);
 
-    // สร้าง Embed (ไม่มี GIF แล้ว)
     const embed = new EmbedBuilder()
       .setColor("#FFD1DC")
       .setDescription(`**${replyText}**`)
