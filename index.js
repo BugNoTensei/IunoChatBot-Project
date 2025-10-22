@@ -14,6 +14,7 @@ const client = new Client({
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildPresences,
   ],
 });
 
@@ -74,3 +75,10 @@ client.on("messageCreate", (message) => handleMessage(message, client));
 
 client.login(process.env.DISCORD_BOT_TOKEN);
 console.log("Bot is running...");
+client.once("clientReady", () => {
+  client.user.setPresence({
+    activities: [{ name: "คุยกับ Rover 💬", type: 4 }], // type: 0 = Playing, 2 = Listening, 3 = Watching, 5 = Competing
+    status: "online", // online | idle | dnd | invisible
+  });
+});
+
