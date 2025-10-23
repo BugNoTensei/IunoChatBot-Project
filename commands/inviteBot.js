@@ -30,7 +30,7 @@ module.exports = {
         })
         .setTimestamp();
 
-      await interaction.reply({ embeds: [embed], ephemeral: true }); // แสดงเฉพาะคนใช้คำสั่ง
+      await interaction.reply({ embeds: [embed], flags: 64 }); // แสดงเฉพาะคนใช้คำสั่ง
     } catch (error) {
       console.error("❌ Invite Command Error:", error);
       await interaction.reply({

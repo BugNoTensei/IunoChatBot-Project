@@ -4,11 +4,16 @@ const { EmbedBuilder } = require("discord.js");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({
-  model: "gemini-2.0-flash",
+  model: "gemini-2.0-flash-lite",
 });
+const { handleQRC } = require("./qrcHandler.js");
 
 module.exports = async (message, client) => {
   if (message.author.bot) return;
+  if (message.content.startsWith("!qrc")) {
+    await handleQRC(message);
+    return;
+  }
 
   const allowedChannelsPath = "./allowedChannels.json";
   if (!fs.existsSync(allowedChannelsPath)) return;

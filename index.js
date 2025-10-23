@@ -72,7 +72,6 @@ client.on("interactionCreate", async (interaction) => {
 // Event: เมื่อมีข้อความในห้องที่เปิดบอท
 const handleMessage = require("./handlers/messageHandler");
 client.on("messageCreate", (message) => handleMessage(message, client));
-
 client.login(process.env.DISCORD_BOT_TOKEN);
 console.log("Bot is running...");
 client.once("clientReady", () => {
