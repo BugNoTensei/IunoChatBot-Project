@@ -6,7 +6,7 @@ module.exports = {
     .setDescription("ให้ Iuno เล่าเกี่ยวกับโปรเจกต์นี้ให้ Rover ฟัง 💬"),
 
   async execute(interaction) {
-    const gifUrl = "https://media.tenor.com/Oka2YR64ZiEAAAAC/wuwa-iuno.gif"; // ✅ ลิงก์ GIF จาก Tenor (ไฟล์ .gif ตรง)
+    const gifUrl = "https://media.tenor.com/Oka2YR64ZiEAAAAC/wuwa-iuno.gif"; 
 
     const projectDescription = `
 Dev ได้บอก Iuno ไว้ว่า...
