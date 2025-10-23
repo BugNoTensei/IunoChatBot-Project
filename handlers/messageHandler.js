@@ -4,7 +4,7 @@ const { EmbedBuilder } = require("discord.js");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({
-  model: "gemini-2.0-flash-lite",
+  model: "gemini-2.0-flash",
 });
 const { handleQRC } = require("./qrcHandler.js");
 
